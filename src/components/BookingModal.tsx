@@ -51,48 +51,46 @@ export const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
               onClick={onClose}
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             >
-              {/* --- THIS IS THE DIV WE ARE EDITING --- */}
               <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 onClick={(e) => e.stopPropagation()}
-                // Reverted back to the solid, non-glassy background
-                className="relative w-full max-w-2xl bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl shadow-amber-500/10"
+                className="relative w-full max-w-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-3xl shadow-2xl shadow-amber-500/10"
               >
-                 <div className="p-8 md:p-12 overflow-y-auto max-h-[90vh] modal-content-area">
+                 <div className="p-6 sm:p-8 md:p-12 overflow-y-auto max-h-[90vh] modal-content-area">
                     <div className="text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white">Let's work together</h2>
-                        <p className="mt-4 text-stone-400 max-w-xl mx-auto">Bring cutting-edge AI, Data Science, and Engineering insights to your next project.</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 dark:text-white">Let's work together</h2>
+                        <p className="mt-4 text-stone-600 dark:text-stone-400 max-w-xl mx-auto text-sm sm:text-base">Bring cutting-edge AI, Data Science, and Engineering insights to your next project.</p>
                     </div>
 
-                    <div className="flex justify-center my-8">
-                        <div className="relative flex p-1 bg-stone-800 rounded-full border border-stone-700">
+                    <div className="flex justify-center my-6 sm:my-8">
+                        <div className="relative flex p-1 bg-stone-100 dark:bg-stone-800 rounded-full border border-stone-200 dark:border-stone-700">
                             {serviceOptions.map(opt => (
-                                <button key={opt.id} onClick={() => setActiveService(opt.id)} className="relative w-28 rounded-full py-2 text-sm font-medium transition-colors z-10 text-stone-300 hover:text-white">{opt.id}</button>
+                                <button key={opt.id} onClick={() => setActiveService(opt.id)} className="relative w-24 sm:w-28 rounded-full py-2 text-xs sm:text-sm font-medium transition-colors z-10 text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white">{opt.id}</button>
                             ))}
                             <div className="absolute top-1 left-1 h-[calc(100%-0.5rem)] w-[calc(33.33%-0.166rem)] bg-amber-500/20 rounded-full transition-transform duration-300 ease-in-out"
                                 style={{ transform: `translateX(${(serviceOptions.findIndex(o => o.id === activeService)) * 100}%)` }} />
                         </div>
                     </div>
 
-                    <div className="text-center mb-8">
-                        <h3 className="text-xl font-semibold text-white">{serviceOptions.find(o => o.id === activeService)?.label}</h3>
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h3 className="text-lg sm:text-xl font-semibold text-stone-900 dark:text-white">{serviceOptions.find(o => o.id === activeService)?.label}</h3>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="mx-auto space-y-6">
+                    <form onSubmit={handleSubmit} className="mx-auto space-y-4 sm:space-y-6">
                         <div>
-                            <label htmlFor="name" className="block text-sm font-medium text-stone-300 mb-2">Full name</label>
-                            <input type="text" name="name" id="name" required value={formData.name} onChange={handleInputChange} className="w-full bg-stone-800 border border-stone-700 rounded-md p-3 text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your full name" />
+                            <label htmlFor="name" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">Full name</label>
+                            <input type="text" name="name" id="name" required value={formData.name} onChange={handleInputChange} className="w-full bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-md p-3 text-stone-900 dark:text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your full name" />
                         </div>
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-stone-300 mb-2">Work email</label>
-                            <input type="email" name="email" id="email" required value={formData.email} onChange={handleInputChange} className="w-full bg-stone-800 border border-stone-700 rounded-md p-3 text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your work email" />
+                            <label htmlFor="email" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">Work email</label>
+                            <input type="email" name="email" id="email" required value={formData.email} onChange={handleInputChange} className="w-full bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-md p-3 text-stone-900 dark:text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Enter your work email" />
                         </div>
                         <div>
-                            <label htmlFor="message" className="block text-sm font-medium text-stone-300 mb-2">Details</label>
-                            <textarea name="message" id="message" rows={5} required value={formData.message} onChange={handleInputChange} className="w-full bg-stone-800 border border-stone-700 rounded-md p-3 text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Please share some details about your project or event..." />
+                            <label htmlFor="message" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">Details</label>
+                            <textarea name="message" id="message" rows={5} required value={formData.message} onChange={handleInputChange} className="w-full bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-md p-3 text-stone-900 dark:text-white focus:ring-amber-500 focus:border-amber-500" placeholder="Please share some details about your project or event..." />
                         </div>
                         <div>
                             <button type="submit" disabled={formStatus.submitting} className="w-full py-3 px-6 bg-amber-500 text-stone-900 font-semibold rounded-md hover:bg-amber-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
@@ -100,8 +98,8 @@ export const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                             </button>
                         </div>
                     </form>
-                    {formStatus.success && <p className="text-center mt-4 text-green-400">Message sent successfully! Thank you.</p>}
-                    {formStatus.error && <p className="text-center mt-4 text-red-400">{formStatus.error}</p>}
+                    {formStatus.success && <p className="text-center mt-4 text-green-600 dark:text-green-400">Message sent successfully! Thank you.</p>}
+                    {formStatus.error && <p className="text-center mt-4 text-red-600 dark:text-red-400">{formStatus.error}</p>}
                 </div>
               </motion.div>
             </motion.div>

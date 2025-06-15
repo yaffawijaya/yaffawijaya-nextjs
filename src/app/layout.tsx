@@ -1,8 +1,10 @@
+// src/app/layout.tsx
 // This is now a Server Component again (no "use client")
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import LayoutClient from "@/components/LayoutClient"; // Import our new client wrapper
+// Make sure this path is correct if LayoutClient.tsx is not directly in components/
+import LayoutClient from "@/components/LayoutClient"; 
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
-        {/* We use our new client component to wrap the page content */}
+        {/* LayoutClient will now contain the Navbar, ThemeProvider, and ThemeToggle */}
         <LayoutClient>
           {children}
         </LayoutClient>

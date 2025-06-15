@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, MouseEvent, UIEvent, useEffect } from 'react';
 import Image from 'next/image';
-import { techLogos } from '@/data/techLogos'; // <-- We import the data now
+import { techLogos } from '@/data/techLogos';
 
 const TechLogoScroller = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -13,8 +13,6 @@ const TechLogoScroller = () => {
   const [isAnimated, setIsAnimated] = useState(true);
   const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // The local `techLogos` array has been removed.
-  // We duplicate the logos 4 times to make the drag area much larger.
   const duplicatedLogos = [...techLogos, ...techLogos, ...techLogos, ...techLogos];
 
   const onMouseDown = (e: MouseEvent<HTMLDivElement>) => {
@@ -62,7 +60,6 @@ const TechLogoScroller = () => {
     }
   };
   
-  // Set initial scroll position to avoid starting at the very beginning
   useEffect(() => {
     if (scrollerRef.current && scrollContentRef.current) {
         const firstSetWidth = scrollContentRef.current.scrollWidth / 4;
@@ -71,7 +68,6 @@ const TechLogoScroller = () => {
     }
   }, []);
 
-  // Cleanup the timeout on unmount
   useEffect(() => {
     return () => {
       if (animationTimeoutRef.current) clearTimeout(animationTimeoutRef.current);
@@ -80,7 +76,7 @@ const TechLogoScroller = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto py-8">
-      <h3 className="text-center text-stone-400 font-semibold mb-8">My Favorite Tools & Technologies</h3>
+      <h3 className="text-center text-stone-600 dark:text-stone-400 font-semibold mb-8">My Favorite Tools & Technologies</h3>
       <div 
         className="scroller"
         ref={scrollerRef}

@@ -1,29 +1,42 @@
-'use client'; // This is our new client component
+'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
-// This component wraps your page content (children)
 export default function LayoutClient({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Initialize theme on mount
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const root = window.document.documentElement;
+    root.classList.add(savedTheme);
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
-      {/* All the client-side logic and components are now here */}
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Navbar onContactClick={() => setIsModalOpen(true)} />
-
+      
       <main>
         {children}
       </main>
 
       <Footer />
+      <ThemeToggle />
     </>
   );
 }
