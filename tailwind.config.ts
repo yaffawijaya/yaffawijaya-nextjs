@@ -2,8 +2,11 @@ import type { Config } from 'tailwindcss'
 
 export default {
   content: [
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}', // For pages directory (if still using it)
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}', // IMPORTANT: For your app directory
+    './src/**/*.{js,ts,jsx,tsx,mdx}', // Broad catch-all for anything in src
+    './public/**/*.html', // If you have any HTML files in public
   ],
   theme: {
     extend: {
