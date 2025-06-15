@@ -12,9 +12,9 @@ const nextConfig = {
       { protocol: 'https', hostname: 'download.logo.wine' },
       { protocol: 'https', hostname: 'raw.githubusercontent.com' },
       { protocol: 'https', hostname: 'but.co.id' },
-      
-      
-      
+
+
+
       // New domains for your experience logos
       { protocol: 'https', hostname: 'bigdatatelyu.github.io' },
       { protocol: 'https', hostname: 'ik.imagekit.io' },
@@ -23,4 +23,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig; // Ensure this line is present
