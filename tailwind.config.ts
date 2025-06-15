@@ -7,18 +7,14 @@ export default {
   ],
   theme: {
     extend: {
-      // Your defined custom color palette
-      colors: {
-        'primary': '#181C14',    // Darkest Background
-        'secondary': '#3C3D37',  // UI Elements, Cards
-        'accent': '#697565',     // Borders, Highlights, Accent Text
-        'text-main': '#ECDFCC',  // Main Text
-        'text-muted': '#A69E90', // Muted/Subtle Text
-      },
-      // Custom height values
+      // Here we add your custom height values so Tailwind can use them.
+      // The key is the class name (e.g., 'h-11') and the value is the CSS value.
       height: {
-        '11': '2.75rem', '13': '3.25rem', '15': '3.75rem', 
-        '17': '4.25rem', '20': '5rem', '50': '12.5rem',
+        '11': '2.75rem', // 44px
+        '13': '3.25rem', // 52px
+        '15': '3.75rem', // 60px
+        '17': '4.25rem', // 68px
+        '50': '12.5rem', // 200px
       }
     },
   },
