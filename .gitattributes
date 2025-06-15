@@ -1,0 +1,17 @@
+# Enforce LF line endings for all text files in the repository
+* text=auto eol=lf
+
+# Treat specific file types as binary (no line ending conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.svg binary

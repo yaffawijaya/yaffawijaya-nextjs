@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1c1917; 
+  --foreground: #e7e5e4; 
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+
+.navbar-glassy {
+  background: rgba(28, 25, 23, 0.5);
+  backdrop-filter: blur(12px) saturate(280%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+.scroller {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  overflow: hidden;
+  cursor: grab;
+}
+
+.scroller:active {
+    cursor: grabbing;
+}
+
+.scroller-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  width: max-content;
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1.5rem));
+  }
+}
+
+.scroller-logo-item {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* Apply grayscale by default */
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* On hover, remove grayscale and increase opacity */
+.scroller-logo-item:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* This new class will handle inverting dark logos */
+.invert-on-dark {
+    filter: invert(1) grayscale(1); /* Invert color then make it grayscale (so black becomes white) */
+}
+
+.scroller-logo-item:hover .invert-on-dark {
+    /* On hover, we just invert, we don't apply grayscale */
+    filter: invert(1);
+}
+
+
+.horizontal-scroller {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1.5rem; /* For scrollbar visibility */
+  gap: 2rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  cursor: grab;
+}
+
+.horizontal-scroller::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.horizontal-scroller:active {
+  cursor: grabbing;
+}
+
+.project-card-container {
+  flex: 0 0 auto;
+  width: 90%;
+  max-width: 380px;
+}
+
+.modal-content-area {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal-content-area::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
