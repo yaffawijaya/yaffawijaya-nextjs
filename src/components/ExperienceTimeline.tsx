@@ -5,7 +5,7 @@ import { sortedExperiences, Role, calculateDuration } from '@/data/experience';
 const RoleCard = ({ role, isLast }: { role: Role, isLast: boolean }) => (
     <div className="relative flex items-start">
         <div className="flex-shrink-0 w-8 flex justify-center">
-            <div className="h-3 w-3 rounded-full bg-stone-400 dark:bg-stone-500 mt-1.5"></div>
+            <div className="h-3 w-3 rounded-full bg-amber-400 dark:bg-stone-500 mt-1.5 ring-4 ring-white dark:ring-stone-900"></div>
         </div>
         <div className="ml-4 pb-12 w-full">
             <h4 className="text-lg font-semibold text-stone-900 dark:text-white">{role.title}</h4>

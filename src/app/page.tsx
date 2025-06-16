@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto space-y-24 md:space-y-36 px-4 sm:px-6 lg:px-8 mb-24">
         <section id="home" className="flex flex-col items-center justify-center text-center pt-32 md:pt-40">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-stone-900 dark:text-white text-responsive-hero">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-stone-900 dark:text-white text-responsive-hero tracking-tight">
             {heroData.name}
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl text-amber-600 dark:text-amber-300 font-semibold">
@@ -27,7 +27,7 @@ export default function Home() {
             {heroData.description}
           </p>
           <div className="mt-10 flex gap-4">
-            <a href="#projects" className="px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-500 text-stone-900 font-semibold rounded-md hover:bg-amber-400 transition-colors shadow-lg shadow-amber-500/20 text-sm sm:text-base">
+            <a href="#projects" className="px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/20 text-sm sm:text-base">
               Explore My Work
             </a>
           </div>

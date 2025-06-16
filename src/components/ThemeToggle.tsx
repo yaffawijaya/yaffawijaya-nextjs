@@ -35,7 +35,7 @@ export function ThemeToggle() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 dark:from-amber-500 dark:to-amber-700 rounded-full shadow-lg shadow-amber-500/30 dark:shadow-amber-500/20 flex items-center justify-center group transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/40 dark:hover:shadow-amber-500/30"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-500 dark:from-amber-500 dark:to-amber-700 rounded-full shadow-lg shadow-stone-400/30 dark:shadow-amber-500/20 flex items-center justify-center group transition-all duration-300 hover:shadow-xl hover:shadow-stone-500/30 dark:hover:shadow-amber-500/30 border border-amber-300/50 dark:border-transparent"
       aria-label="Toggle theme"
     >
       <div className="relative w-6 h-6">

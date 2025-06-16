@@ -18,7 +18,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
   const navbarClasses = `fixed top-4 left-0 right-0 w-full z-50 transition-all duration-300 ${hasScrolled ? 'top-0' : 'top-4'}`;
   const headerClasses = `max-w-5xl mx-auto rounded-full border shadow-lg transition-all duration-300 ${
     hasScrolled 
-      ? 'navbar-glassy border-stone-300 dark:border-stone-700/60' 
+      ? 'navbar-glassy border-stone-200/60 dark:border-stone-700/60 shadow-stone-200/50 dark:shadow-stone-950/50' 
       : 'bg-transparent border-transparent'
   }`;
 
@@ -42,7 +42,15 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                   width={120} 
                   height={34} 
                   priority 
-                  className="dark:invert-0 invert"
+                  className="dark:invert-0 invert-0 dark:block hidden"
+                />
+                <Image 
+                  src="/yaffawijaya-name-logo-dark.svg" 
+                  alt="Yaffazka Afazillah Wijaya Logo" 
+                  width={120} 
+                  height={34} 
+                  priority 
+                  className="dark:hidden block"
                 />
               </Link>
             </div>
@@ -54,7 +62,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                   <a 
                     key={link.href}
                     href={link.href} 
-                    className="text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white text-sm font-medium transition-colors"
+                    className="text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white text-sm font-medium transition-colors"
                   >
                     {link.label}
                   </a>

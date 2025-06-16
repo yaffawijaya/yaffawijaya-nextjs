@@ -43,7 +43,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <aside className="lg:col-span-4">
-          <div className="lg:sticky lg:top-28 bg-stone-50 dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-lg p-6">
+          <div className="lg:sticky lg:top-28 bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-lg p-6 shadow-sm">
             <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-4">Project Info</h3>
             <ul className="space-y-4">
               <li className="flex flex-col">
@@ -58,7 +58,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                 <span className="text-sm font-semibold text-stone-600 dark:text-stone-400">Technologies</span>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tags.map((tag: string) => (
-                    <span key={tag} className="px-3 py-1 bg-stone-200 dark:bg-stone-700 text-xs text-stone-700 dark:text-stone-300 rounded-full font-semibold">
+                    <span key={tag} className="px-3 py-1 bg-stone-100 dark:bg-stone-700 text-xs text-stone-600 dark:text-stone-300 rounded-full font-semibold">
                       {tag}
                     </span>
                   ))}
@@ -84,7 +84,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             <p className="text-base sm:text-lg leading-relaxed">{project.caseStudy.solution}</p>
           </div>
           
-          <div className="bg-stone-50 dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-lg p-6">
+          <div className="bg-amber-50 dark:bg-stone-800/50 border border-amber-200 dark:border-stone-700 rounded-lg p-6">
             <h3 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white mb-4">Key Features & Results</h3>
             <ul className="space-y-3 text-base sm:text-lg">
               <FeatureListItem>Engineered a robust GraphRAG system for health data.</FeatureListItem>

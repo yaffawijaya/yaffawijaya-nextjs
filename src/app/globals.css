@@ -116,7 +116,7 @@ body {
 
 /* Light mode adjustments for logos */
 .light .scroller-logo-item {
-  filter: grayscale(1) brightness(0.8);
+  filter: grayscale(1) brightness(0.7);
 }
 
 .light .scroller-logo-item:hover {

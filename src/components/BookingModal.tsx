@@ -66,11 +66,11 @@ export const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                     </div>
 
                     <div className="flex justify-center my-6 sm:my-8">
-                        <div className="relative flex p-1 bg-stone-100 dark:bg-stone-800 rounded-full border border-stone-200 dark:border-stone-700">
+                        <div className="relative flex p-1 bg-stone-50 dark:bg-stone-800 rounded-full border border-stone-200 dark:border-stone-700 shadow-sm">
                             {serviceOptions.map(opt => (
                                 <button key={opt.id} onClick={() => setActiveService(opt.id)} className="relative w-24 sm:w-28 rounded-full py-2 text-xs sm:text-sm font-medium transition-colors z-10 text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white">{opt.id}</button>
                             ))}
-                            <div className="absolute top-1 left-1 h-[calc(100%-0.5rem)] w-[calc(33.33%-0.166rem)] bg-amber-500/20 rounded-full transition-transform duration-300 ease-in-out"
+                            <div className="absolute top-1 left-1 h-[calc(100%-0.5rem)] w-[calc(33.33%-0.166rem)] bg-amber-400/30 dark:bg-amber-500/20 rounded-full transition-transform duration-300 ease-in-out"
                                 style={{ transform: `translateX(${(serviceOptions.findIndex(o => o.id === activeService)) * 100}%)` }} />
                         </div>
                     </div>
