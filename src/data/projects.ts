@@ -1,5 +1,7 @@
 // FILE: src/data/projects.ts
 
+// type: github | medium | youtube | gdrive | fallback
+
 export const allProjectsData = [
   {
     slug: 'samsung-health-rag',
@@ -30,7 +32,7 @@ export const allProjectsData = [
     description: "Developed a novel dynamic knowledge graph from 7,700+ news articles, applying temporal analysis with GPT-4o-mini for entity extraction.",
     tags: ["Knowledge Graph", "GPT-4o", "Web Scraping", "T-KGC"],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_Telkom_University_potrait.png',
-    role: "Lead Researcher",
+    role: "Author",
     duration: "Ongoing (Started Sep 2024)",
     links: [
       { type: 'medium', url: 'https://medium.com/@yaffawijaya/indovest-dkg-article', label: 'Read Article on Medium' }
@@ -52,7 +54,7 @@ export const allProjectsData = [
     description: "Led a capstone project to build a cataract detection app using a VGG16 model, with a FastAPI backend deployed on Google Cloud Platform.",
     tags: ["Computer Vision", "FastAPI", "GCP", "Kotlin", "VGG16"],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Bangkit-logo.png',
-    role: "Lead Cloud & API Engineer",
+    role: "Lead Team & Lead Cloud Engineer ",
     duration: "6 Months (Bangkit Capstone)",
     links: [
       { type: 'github', url: 'https://github.com/yaffawijaya/bangkit-academy-cthru-C241-PS065', label: 'Check our Branch on GitHub Repository' }
@@ -114,7 +116,7 @@ export const allProjectsData = [
     description: "Developed full-stack Django web applications and provided consultation on machine learning and time-series forecasting tasks for various clients.",
     tags: ["Django", "Full-Stack", "Machine Learning", "Consulting"],
     imageUrl: 'https://www.svgrepo.com/show/310247/window-dev-tools.svg',
-    role: "Full-Stack & ML Consultant",
+    role: "Full-Stack Developer & Data Science Consultant",
     duration: "5 Months (Jul-Nov 2023)",
     links: [],
     caseStudy: {

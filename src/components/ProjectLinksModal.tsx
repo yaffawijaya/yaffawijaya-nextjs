@@ -20,12 +20,12 @@ interface ProjectLinksModalProps {
 
 // Icon mapping for different link types
 const iconMap: { [key: string]: { src: string; alt: string } } = {
-  github: { src: 'https://cdn-icons-png.flaticon.com/512/25/25231.png', alt: 'GitHub' },
-  medium: { src: 'https://cdn-icons-png.freepik.com/256/5968/5968933.png', alt: 'Medium' },
-  youtube: { src: 'https://static-00.iconduck.com/assets.00/youtube-icon-256x181-kcwa7gfk.png', alt: 'YouTube' },
-  gdrive: { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png', alt: 'Google Drive' },
+  github: { src: '/icons/github.png', alt: 'GitHub' },
+  medium: { src: '/icons/medium.png', alt: 'Medium' },
+  youtube: { src: '/icons/youtube.png', alt: 'YouTube' },
+  gdrive: { src: '/icons/gdrive.png', alt: 'Google Drive' },
   // A generic fallback icon for any other type
-  fallback: { src: 'https://static-00.iconduck.com/assets.00/create-link-icon-2048x2048-vdoe2pfs.png', alt: 'Link' },
+  fallback: { src: '/icons/fallback-link.png', alt: 'Link' },
 };
 
 const ProjectLinksModal = ({ isOpen, onClose, links, projectName }: ProjectLinksModalProps) => {
