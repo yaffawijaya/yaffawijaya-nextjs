@@ -37,13 +37,18 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
             <div className="space-y-4">
               <a href="https://www.linkedin.com/in/yaffawijaya/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 w-full p-4 bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-700 hover:border-amber-500 transition-all">
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn" width={32} height={32} />
+                <Image src="/icons/linkedin.png" alt="LinkedIn" width={32} height={32} />
                 <span className="font-semibold text-stone-900 dark:text-white">Connect on LinkedIn</span>
               </a>
 
               <a href="mailto:yaffazka@gmail.com" className="flex items-center gap-4 w-full p-4 bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-700 hover:border-amber-500 transition-all">
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" width={32} height={32} />
+                <Image src="/icons/gmail.png" alt="Gmail" width={32} height={32} />
                 <span className="font-semibold text-stone-900 dark:text-white">Send me an Email</span>
+              </a>
+
+              <a href="https://wa.me/6282126317401" target="_blank" className="flex items-center gap-4 w-full p-4 bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-700 hover:border-amber-500 transition-all">
+                <Image src="/icons/whatsapp.png" alt="WhatsApp" width={32} height={32} />
+                <span className="font-semibold text-stone-900 dark:text-white">Chat on WhatsApp</span>
               </a>
             </div>
           </motion.div>
