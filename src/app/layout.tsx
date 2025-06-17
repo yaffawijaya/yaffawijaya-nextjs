@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "Yaffazka Afazillah Wijaya | Data Scientist & AI Engineer",
   description: "The personal portfolio of Yaffazka Afazillah Wijaya, showcasing advanced projects in Data Science, AI, Data Engineering, and GraphRAG.",
   icons: {
-    icon: '/tab-icon.svg',
-    apple: '/tab-icon.svg',
+    icon: '/profiles/yaffa/tab-icon.svg',
+    apple: '/profiles/yaffa/tab-icon.svg',
   },
 };
 

@@ -14,7 +14,7 @@ export const AboutSection = () => {
             <aside className="lg:col-span-2">
                 <div className="lg:sticky lg:top-28">
                     <div className="p-2 bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-lg shadow-md dark:shadow-2xl shadow-stone-200/30 dark:shadow-stone-950">
-                        <Image src="/me.png" alt="Yaffazka Afazillah Wijaya" width={500} height={500} className="rounded-md object-cover w-full h-full" priority />
+                        <Image src="/profiles/yaffa/me.png" alt="Yaffazka Afazillah Wijaya" width={500} height={500} className="rounded-md object-cover w-full h-full" priority />
                     </div>
                 </div>
             </aside>

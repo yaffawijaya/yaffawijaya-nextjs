@@ -24,6 +24,17 @@ body {
 
 .dark .navbar-glassy {
   background: rgba(28, 25, 23, 0.5);
+  backdrop-filter: blur(12px) saturate(280%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Safelist utility to preserve navbar-glassy in build */
+@layer utilities {
+  .__safelist {
+    background: rgba(28, 25, 23, 0.5);
+    backdrop-filter: blur(12px) saturate(280%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
 }
 
 .scroller {
@@ -46,7 +57,7 @@ body {
 }
 
 .scroller:active {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
 .scroller-inner {
@@ -93,28 +104,27 @@ body {
 }
 
 .scroller-logo-item:hover {
-    filter: grayscale(0);
-    opacity: 1;
-    transform: scale(1.1);
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .invert-on-dark {
-    filter: invert(1) grayscale(1);
+  filter: invert(1) grayscale(1);
 }
 
 .dark .invert-on-dark {
-    filter: invert(1) grayscale(1);
+  filter: invert(1) grayscale(1);
 }
 
 .scroller-logo-item:hover .invert-on-dark {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 .dark .scroller-logo-item:hover .invert-on-dark {
-    filter: invert(1);
+  filter: invert(1);
 }
 
-/* Light mode adjustments for logos */
 .light .scroller-logo-item {
   filter: grayscale(1) brightness(0.7);
 }
@@ -178,7 +188,6 @@ body {
   display: none;
 }
 
-/* Mobile menu styles */
 .mobile-menu {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -188,7 +197,6 @@ body {
   transform: translateX(0);
 }
 
-/* Responsive text utilities */
 @media (max-width: 768px) {
   .text-responsive-hero {
     font-size: 3rem;

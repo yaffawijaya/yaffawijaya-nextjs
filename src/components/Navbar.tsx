@@ -1,3 +1,5 @@
+// File: src/components/Navbar.tsx
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -37,7 +39,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image 
-                  src="/yaffawijaya-name-logo.png" 
+                  src="/profiles/yaffa/name-logo.png" 
                   alt="Yaffazka Afazillah Wijaya Logo" 
                   width={120} 
                   height={34} 
@@ -45,7 +47,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                   className="dark:invert-0 invert-0 dark:block hidden"
                 />
                 <Image 
-                  src="/yaffawijaya-name-logo-dark.svg" 
+                  src="/profiles/yaffa/name-logo-dark.png" 
                   alt="Yaffazka Afazillah Wijaya Logo" 
                   width={120} 
                   height={34} 

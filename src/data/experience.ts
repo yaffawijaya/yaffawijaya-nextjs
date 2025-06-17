@@ -20,7 +20,7 @@ export interface ExperienceCompany {
 const allExperiences: ExperienceCompany[] = [
   {
     company: "Big Data Laboratory Telkom University",
-    logoUrl: "https://bigdatatelyu.github.io/logos/bigdata.png",
+    logoUrl: "/company-logos/bigdatalab.png",
     location: "Bandung, West Java, Indonesia",
     roles: [
       {
@@ -46,7 +46,7 @@ const allExperiences: ExperienceCompany[] = [
   },
   {
     company: "Fakultas Informatika Telkom University",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_Telkom_University_potrait.png",
+    logoUrl: "/company-logos/telkom-university.png",
     location: "Bandung, West Java, Indonesia",
     roles: [
       {
