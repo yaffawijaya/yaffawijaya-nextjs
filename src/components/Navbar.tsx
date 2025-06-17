@@ -20,7 +20,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
   const navbarClasses = `fixed top-4 left-0 right-0 w-full z-50 transition-all duration-300 ${hasScrolled ? 'top-0' : 'top-4'}`;
   const headerClasses = `max-w-5xl mx-auto rounded-full border shadow-lg transition-all duration-300 ${
     hasScrolled 
-      ? 'navbar-glassy border-stone-200/60 dark:border-stone-700/60 shadow-stone-200/50 dark:shadow-stone-950/50' 
+      ? 'backdrop-blur-lg backdrop-saturate-200 bg-white/50 dark:bg-stone-900/50 border-stone-200/60 dark:border-stone-700/60 shadow-stone-200/50 dark:shadow-stone-950/50'
       : 'bg-transparent border-transparent'
   }`;
 
