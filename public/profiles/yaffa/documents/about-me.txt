@@ -1,0 +1,5 @@
+Hi, I'm Yaffa. I'm passionate about Knowledge Graphs, Distributed Computing, and Parallel Systems. I specialize in both Data Science Engineering and Analytics, and I’m familiar with cloud computing like GCP, Azure, and AWS.
+
+I have strong skills in Python, Go, MySQL, MongoDB, and Neo4j. I’ve worked on various projects using frameworks like Django, Node.js, Docker, and Kubernetes.
+
+My learning method is hands-on experimentation. Fun fact: I love cats even though I’m allergic to their fur and saliva. Feel free to ask me anything tech or data related!
