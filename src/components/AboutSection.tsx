@@ -20,13 +20,13 @@ export const AboutSection = () => {
             </aside>
             <div className="lg:col-span-3">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start mb-8 gap-4">
-                    <div className="relative flex p-1 bg-white dark:bg-stone-800 rounded-full border border-stone-200 dark:border-stone-700 shadow-sm">
-                        <button onClick={() => setActiveView('timeline')} className="relative w-28 rounded-full py-2 text-sm font-medium transition-colors z-10 text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white">Timeline</button>
-                        <button onClick={() => setActiveView('description')} className="relative w-28 rounded-full py-2 text-sm font-medium transition-colors z-10 text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white">Description</button>
-                        <div className="absolute top-1 left-1 h-[calc(100%-0.5rem)] w-[calc(50%-0.25rem)] bg-amber-500/20 rounded-full transition-transform duration-300 ease-in-out" style={{ transform: `translateX(${activeView === 'timeline' ? '0%' : '100%'})` }} />
+                    <div className="relative flex p-1.5 bg-stone-100 dark:bg-stone-900/50 rounded-full border border-stone-200 dark:border-stone-800">
+                        <button onClick={() => setActiveView('timeline')} className={`relative w-32 rounded-full py-2.5 text-sm font-semibold transition-colors z-10 ${activeView === 'timeline' ? 'text-amber-700 dark:text-amber-400' : 'text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'}`}>Timeline</button>
+                        <button onClick={() => setActiveView('description')} className={`relative w-32 rounded-full py-2.5 text-sm font-semibold transition-colors z-10 ${activeView === 'description' ? 'text-amber-700 dark:text-amber-400' : 'text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'}`}>Description</button>
+                        <div className="absolute top-1.5 left-1.5 h-[calc(100%-0.75rem)] w-[calc(50%-0.375rem)] bg-white dark:bg-stone-800 rounded-full shadow-sm border border-stone-200/50 dark:border-stone-700/50 transition-transform duration-300 ease-out" style={{ transform: `translateX(${activeView === 'timeline' ? '0%' : '100%'})` }} />
                     </div>
                 </div>
-                
+
                 <hr className="border-stone-200 dark:border-stone-700 mb-8" />
                 <div>
                     {activeView === 'timeline' ? <ExperienceTimeline /> : <ExperienceDescription />}

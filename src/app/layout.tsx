@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 // Make sure this path is correct if LayoutClient.tsx is not directly in components/
-import LayoutClient from "@/components/LayoutClient"; 
+import LayoutClient from "@/components/LayoutClient";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,9 +28,11 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
         {/* LayoutClient will now contain the Navbar, ThemeProvider, and ThemeToggle */}
-        <LayoutClient>
-          {children}
-        </LayoutClient>
+        <Providers>
+          <LayoutClient>
+            {children}
+          </LayoutClient>
+        </Providers>
       </body>
     </html>
   );

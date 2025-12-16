@@ -2,26 +2,18 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Get theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') as 'dark' | 'light' || 'dark';
-    setTheme(savedTheme);
     setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(newTheme);
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   if (!mounted) {
@@ -41,9 +33,8 @@ export function ThemeToggle() {
       <div className="relative w-6 h-6">
         {/* Sun Icon */}
         <svg
-          className={`absolute inset-0 transform transition-all duration-300 ${
-            theme === 'dark' ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
-          }`}
+          className={`absolute inset-0 transform transition-all duration-300 ${resolvedTheme === 'dark' ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
+            }`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -59,9 +50,8 @@ export function ThemeToggle() {
 
         {/* Moon Icon */}
         <svg
-          className={`absolute inset-0 transform transition-all duration-300 ${
-            theme === 'light' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'
-          }`}
+          className={`absolute inset-0 transform transition-all duration-300 ${resolvedTheme === 'light' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'
+            }`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

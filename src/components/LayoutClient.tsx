@@ -16,9 +16,6 @@ export default function LayoutClient({
 
   useEffect(() => {
     // Initialize theme on mount
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    const root = window.document.documentElement;
-    root.classList.add(savedTheme);
     setMounted(true);
   }, []);
 
@@ -30,7 +27,7 @@ export default function LayoutClient({
     <>
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Navbar onContactClick={() => setIsModalOpen(true)} />
-      
+
       <main>
         {children}
       </main>

@@ -18,11 +18,10 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
   }, []);
 
   const navWrapper = `fixed z-40 left-0 right-0 top-2 md:top-4 w-full flex justify-center pointer-events-none`;
-  const headerClasses = `pointer-events-auto w-full max-w-5xl h-16 rounded-full px-6 flex items-center justify-between border shadow-md transition-all duration-300
-    ${
-      hasScrolled
-        ? 'backdrop-blur-sm backdrop-saturate-200 bg-white/50 dark:bg-stone-900/50 border-stone-200/60 dark:border-stone-700/60 shadow-stone-200/30 dark:shadow-stone-950/30'
-        : 'bg-transparent border-transparent'
+  const headerClasses = `pointer-events-auto w-full max-w-5xl h-14 md:h-16 rounded-full px-5 md:px-6 flex items-center justify-between transition-all duration-300
+    ${hasScrolled
+      ? 'navbar-glassy shadow-lg shadow-stone-200/20 dark:shadow-stone-950/20'
+      : 'bg-transparent border border-transparent'
     }`;
 
   const navLinks = [

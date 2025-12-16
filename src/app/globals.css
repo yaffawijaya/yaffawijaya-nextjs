@@ -1,31 +1,61 @@
 @import "tailwindcss";
 
 :root {
+  /* Nuanced Light Theme */
   --background: #fafaf9;
+  /* Stone-50 */
   --foreground: #1c1917;
+  /* Stone-900 */
+  --muted: #f5f5f4;
+  /* Stone-100 */
+  --muted-foreground: #78716c;
+  /* Stone-500 */
+  --border: #e7e5e4;
+  /* Stone-200 */
+  --primary: #f59e0b;
+  /* Amber-500 */
+  --primary-foreground: #ffffff;
 }
 
 .dark {
-  --background: #1c1917;
-  --foreground: #e7e5e4;
+  /* Deep Rich Dark Theme */
+  --background: #0c0a09;
+  /* Stone-950 - Darker than before for depth */
+  --foreground: #f5f5f4;
+  /* Stone-100 */
+  --muted: #1c1917;
+  /* Stone-900 */
+  --muted-foreground: #a8a29e;
+  /* Stone-400 */
+  --border: #292524;
+  /* Stone-800 */
+  --primary: #fbbf24;
+  /* Amber-400 */
+  --primary-foreground: #1c1917;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar-glassy {
-  background: rgba(250, 250, 249, 0.5);
-  backdrop-filter: blur(12px) saturate(280%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(250, 250, 249, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(231, 229, 228, 0.5);
+  /* subtle border */
 }
 
 .dark .navbar-glassy {
-  background: rgba(28, 25, 23, 0.5);
-  backdrop-filter: blur(12px) saturate(280%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(12, 10, 9, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(41, 37, 36, 0.5);
 }
 
 /* Safelist utility to preserve navbar-glassy in build */
@@ -38,20 +68,16 @@ body {
 }
 
 .scroller {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 10%,
-    #000 90%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 10%,
-    #000 90%,
-    transparent
-  );
+  mask-image: linear-gradient(to right,
+      transparent,
+      #000 10%,
+      #000 90%,
+      transparent);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      #000 10%,
+      #000 90%,
+      transparent);
   overflow: hidden;
   cursor: grab;
 }
@@ -83,6 +109,7 @@ body {
   }
 }
 
+/* Improved Scroller Logo Handling */
 .scroller-logo-item {
   height: 60px;
   display: flex;
@@ -90,26 +117,20 @@ body {
   justify-content: center;
   user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  filter: grayscale(1);
-  opacity: 0.6;
+  filter: grayscale(1) opacity(0.7);
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .scroller-logo-item {
-    height: 48px;
-  }
-}
-
 .scroller-logo-item:hover {
-  filter: grayscale(0);
-  opacity: 1;
+  filter: grayscale(0) opacity(1);
   transform: scale(1.1);
 }
 
 .invert-on-dark {
+  filter: invert(1) grayscale(1);
+}
+
+[data-theme='dark'] .invert-on-dark {
   filter: invert(1) grayscale(1);
 }
 
@@ -125,6 +146,7 @@ body {
   filter: invert(1);
 }
 
+/* Light mode specific adjustments for logos if needed */
 .light .scroller-logo-item {
   filter: grayscale(1) brightness(0.7);
 }
