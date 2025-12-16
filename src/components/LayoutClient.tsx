@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 
 export default function LayoutClient({
   children,
@@ -33,7 +33,6 @@ export default function LayoutClient({
       </main>
 
       <Footer />
-      <ThemeToggle />
     </>
   );
 }
