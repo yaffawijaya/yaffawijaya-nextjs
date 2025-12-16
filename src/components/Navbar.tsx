@@ -39,20 +39,12 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/profiles/yaffa/name-logo.png"
-                alt="Yaffazka Afazillah Wijaya Logo"
-                width={120}
-                height={34}
-                priority
-                className="hidden dark:block"
-              />
-              <Image
                 src="/profiles/yaffa/name-logo-dark.png"
                 alt="Yaffazka Afazillah Wijaya Logo"
                 width={120}
                 height={34}
                 priority
-                className="block dark:hidden"
+                className="block"
               />
             </Link>
           </div>
