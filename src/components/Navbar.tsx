@@ -44,7 +44,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                 width={120}
                 height={34}
                 priority
-                className="dark:invert-0 invert-0 dark:block hidden"
+                className="hidden dark:block"
               />
               <Image
                 src="/profiles/yaffa/name-logo-dark.png"
@@ -52,7 +52,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                 width={120}
                 height={34}
                 priority
-                className="dark:hidden block"
+                className="block dark:hidden"
               />
             </Link>
           </div>
