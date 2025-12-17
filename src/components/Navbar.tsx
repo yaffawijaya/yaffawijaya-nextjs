@@ -19,8 +19,8 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
 
   const navbarClasses = `fixed top-4 left-0 right-0 w-full z-50 transition-all duration-300 ${hasScrolled ? 'top-0' : 'top-4'}`;
   const headerClasses = `max-w-5xl mx-auto rounded-full border shadow-lg transition-all duration-300 ${hasScrolled
-      ? 'backdrop-blur-sm backdrop-saturate-200 bg-white/50 dark:bg-stone-900/50 border-stone-200/60 dark:border-stone-700/60 shadow-stone-200/50 dark:shadow-stone-950/50'
-      : 'bg-transparent border-transparent'
+    ? 'navbar-glassy'
+    : 'bg-transparent border-transparent'
     }`;
 
   const navLinks = [
@@ -38,20 +38,12 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
-                  src="/profiles/yaffa/name-logo.png"
-                  alt="Yaffazka Afazillah Wijaya Logo"
-                  width={120}
-                  height={34}
-                  priority
-                  className="dark:invert-0 invert-0 dark:block hidden"
-                />
-                <Image
                   src="/profiles/yaffa/name-logo-dark.png"
                   alt="Yaffazka Afazillah Wijaya Logo"
                   width={120}
                   height={34}
                   priority
-                  className="dark:hidden block"
+                  className="block"
                 />
               </Link>
             </div>
@@ -63,7 +55,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white text-sm font-medium transition-colors"
+                    className="text-stone-600 hover:text-stone-900 text-sm font-medium transition-colors"
                   >
                     {link.label}
                   </a>
@@ -84,7 +76,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-md text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white focus:outline-none"
+                className="p-2 rounded-md text-stone-700 hover:text-stone-900 focus:outline-none"
                 aria-label="Toggle menu"
               >
                 <svg
@@ -116,12 +108,12 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
             className="fixed inset-0 z-40 md:hidden"
           >
             <div className="fixed inset-0 bg-black/50" onClick={() => setIsMobileMenuOpen(false)} />
-            <nav className="fixed top-0 right-0 bottom-0 w-64 bg-stone-50 dark:bg-stone-900 shadow-xl">
+            <nav className="fixed top-0 right-0 bottom-0 w-64 bg-stone-50 shadow-xl">
               <div className="flex items-center justify-between p-6 border-b border-stone-200 dark:border-stone-800">
-                <h2 className="text-lg font-semibold text-stone-900 dark:text-white">Menu</h2>
+                <h2 className="text-lg font-semibold text-stone-900">Menu</h2>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-md text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white"
+                  className="p-2 rounded-md text-stone-700 hover:text-stone-900"
                 >
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -135,7 +127,7 @@ export const Navbar = ({ onContactClick }: { onContactClick: () => void }) => {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-3 text-stone-700 dark:text-stone-300 hover:text-amber-600 dark:hover:text-amber-400 font-medium transition-colors"
+                    className="block py-3 text-stone-700 hover:text-amber-600 font-medium transition-colors"
                   >
                     {link.label}
                   </a>
