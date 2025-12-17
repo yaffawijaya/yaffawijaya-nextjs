@@ -16,8 +16,9 @@ const nextConfig = {
       // New domains for your experience logos
       { protocol: 'https', hostname: 'bigdatatelyu.github.io' },
       { protocol: 'https', hostname: 'ik.imagekit.io' },
+      { protocol: 'https', hostname: 'www.transtrack.co' },
       { protocol: 'https', hostname: 'placehold.co' }, // For the placeholder project images
-      
+
       // From projects icon links
       { protocol: 'https', hostname: 'cdn-icons-png.flaticon.com' },
       { protocol: 'https', hostname: 'cdn-icons-png.freepik.com' },
