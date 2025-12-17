@@ -17,22 +17,7 @@
   --primary-foreground: #ffffff;
 }
 
-.dark {
-  /* Deep Rich Dark Theme */
-  --background: #0c0a09;
-  /* Stone-950 - Darker than before for depth */
-  --foreground: #f5f5f4;
-  /* Stone-100 */
-  --muted: #1c1917;
-  /* Stone-900 */
-  --muted-foreground: #a8a29e;
-  /* Stone-400 */
-  --border: #292524;
-  /* Stone-800 */
-  --primary: #fbbf24;
-  /* Amber-400 */
-  --primary-foreground: #1c1917;
-}
+/* Dark mode variables removed for forced light mode */
 
 body {
   background: var(--background);
@@ -107,7 +92,7 @@ body {
   }
 }
 
-/* Improved Scroller Logo Handling */
+/* Logo adjustments for Scroller */
 .scroller-logo-item {
   height: 60px;
   display: flex;
@@ -125,39 +110,11 @@ body {
 }
 
 .invert-on-dark {
-  filter: invert(1) grayscale(1);
-}
-
-[data-theme='dark'] .invert-on-dark {
-  filter: invert(1) grayscale(1);
-}
-
-.dark .invert-on-dark {
-  filter: invert(1) grayscale(1);
-}
-
-.scroller-logo-item:hover .invert-on-dark {
-  filter: invert(1);
-}
-
-.dark .scroller-logo-item:hover .invert-on-dark {
-  filter: invert(1);
-}
-
-/* Light mode specific adjustments for logos if needed */
-.light .scroller-logo-item {
-  filter: grayscale(1) brightness(0.7);
-}
-
-.light .scroller-logo-item:hover {
-  filter: grayscale(0) brightness(1);
-}
-
-.light .invert-on-dark {
+  /* No inversion needed for light mode only */
   filter: grayscale(1);
 }
 
-.light .scroller-logo-item:hover .invert-on-dark {
+.scroller-logo-item:hover .invert-on-dark {
   filter: grayscale(0);
 }
 
